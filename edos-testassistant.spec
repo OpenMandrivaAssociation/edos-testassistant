@@ -1,6 +1,6 @@
 %define name edos-testassistant
 %define version 1.0.2alpha
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	The EDOS Manual Test Assistant
 Name:		%{name}
@@ -12,15 +12,9 @@ Group:		Development/Python
 Source0:	http://www.edos-project.org/releases/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Packager:       Francois Dechelle <fdechelle@mandriva.com>
-Requires:       python >= 2.5
+%py_requires -d
 Requires:	python-pyxml
 Requires:       edos-testrunner
-BuildRequires:  python >= 2.5
-%ifarch x86_64
-BuildRequires:  lib64python2.5-devel
-%else
-BuildRequires:  libpython2.5-devel
-%endif
 
 %description
 A test assistant developped by the EDOS project, that can run manual tests and report test results using the EDOS test runner.
@@ -48,6 +42,10 @@ rm -rf %{buildroot}
 %_bindir/edos-testassistant
 
 %changelog
+* Thu May 10 2007 Francois Dechelle <fdechelle@mandriva.com>
+- changed Requires and BuildRequires to use %py_requires -d
+- added removal of unpackaged egg-info file
+
 * Wed Jan 10 2007 Francois Dechelle <fdechelle@mandriva.com>
 - moved to setup.py
 
