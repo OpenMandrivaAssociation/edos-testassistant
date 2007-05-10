@@ -16,7 +16,11 @@ Requires:       python >= 2.5
 Requires:	python-pyxml
 Requires:       edos-testrunner
 BuildRequires:  python >= 2.5
+%ifarch x86_64
+BuildRequires:  lib64python2.5-devel
+%else
 BuildRequires:  libpython2.5-devel
+%endif
 
 %description
 A test assistant developped by the EDOS project, that can run manual tests and report test results using the EDOS test runner.
