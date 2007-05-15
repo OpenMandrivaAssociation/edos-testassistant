@@ -1,6 +1,6 @@
 %define name edos-testassistant
-%define version 1.0.2alpha
-%define release %mkrel 4
+%define version 1.0.3alpha
+%define release %mkrel 1
 
 Summary:	The EDOS Manual Test Assistant
 Name:		%{name}
