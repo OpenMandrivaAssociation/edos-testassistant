@@ -1,6 +1,6 @@
 %define name edos-testassistant
 %define version 1.0.2alpha
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	The EDOS Manual Test Assistant
 Name:		%{name}
@@ -13,8 +13,10 @@ Source0:	http://www.edos-project.org/releases/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Packager:       Francois Dechelle <fdechelle@mandriva.com>
 %py_requires -d
-Requires:	python-pyxml
 Requires:       edos-testrunner
+Requires:	python-pyxml
+Requires:       python-kde
+Requires:       python-qt
 
 %description
 A test assistant developped by the EDOS project, that can run manual tests and report test results using the EDOS test runner.
