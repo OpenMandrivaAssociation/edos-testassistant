@@ -19,7 +19,8 @@ Requires:       python-kde
 Requires:       python-qt
 
 %description
-A test assistant developped by the EDOS project, that can run manual tests and report test results using the EDOS test runner.
+A test assistant developped by the EDOS project, that can run manual tests and
+report test results using the EDOS test runner.
 
 %prep
 %setup -q -n %{name}-%{version}
