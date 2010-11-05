@@ -11,8 +11,7 @@ License:	GPL
 Group:		Development/Python
 Source0:	http://www.edos-project.org/releases/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Packager:       Francois Dechelle <fdechelle@mandriva.com>
-%py_requires -d
+BUildRequires:	python
 Requires:       edos-testrunner
 Requires:	python-pyxml
 Requires:       python-kde
@@ -41,21 +40,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README 
 %{python_sitelib}/edostestassistant/*.py
-%{python_sitelib}/edostestassistant/*.pyc
 %{_bindir}/edos-testassistant
 %{_datadir}/edos-testassistant/translations/TestAssistant_*.qm
-
-%changelog
-* Thu May 24 2007 Francois Dechelle <fdechelle@mandriva.com>
-- added translation files
-
-* Thu May 10 2007 Francois Dechelle <fdechelle@mandriva.com>
-- changed Requires and BuildRequires to use %py_requires -d
-- added removal of unpackaged egg-info file
-
-* Wed Jan 10 2007 Francois Dechelle <fdechelle@mandriva.com>
-- moved to setup.py
-
-* Tue Oct 24 2006 Francois Dechelle <fdechelle@mandriva.com>
-- initial package
-
