@@ -6,7 +6,7 @@ Summary:	The EDOS Manual Test Assistant
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-URL:		http://www.edos-project.org
+URL:		https://www.edos-project.org
 License:	GPL
 Group:		Development/Python
 Source0:	http://www.edos-project.org/releases/%{name}-%{version}.tar.bz2
